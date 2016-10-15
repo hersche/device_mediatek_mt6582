@@ -2,7 +2,7 @@
 # system.prop for generic sdk
 #
 service.adb.root=1
-ro.sf.lcd_density=320
+ro.sf.lcd_density=233
 wifi.interface=wlan0
 persist.mtk.aee.aed=on
 persist.radio.fd.counter=15

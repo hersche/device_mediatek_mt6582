@@ -15,7 +15,7 @@
 #
 
 # The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+$(call inherit-product, device/common/gps/gps_eu_supl.mk)
 
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -176,6 +176,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     gps.mt6582 \
+    gps.mt6582 \
+    gps.default \
+    radio.primary \
     YGPS
 
 PRODUCT_COPY_FILES += \
@@ -189,7 +192,7 @@ PRODUCT_COPY_FILES += \
 ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.adb.secure=0 \
     ro.secure=0 \
-    ro.allow.mock.location=1 \
+    ro.allow.mock.location=0 \
     persist.service.adb.enable=1 \
     persist.service.debuggable=1 \
     persist.sys.usb.config=mtp
@@ -201,13 +204,13 @@ persist.sys.media.use-awesome=true
 PRODUCT_PROPERTY_OVERRIDES := \
     ro.adb.secure=0 \
     ro.secure=0 \
-    ro.mediatek.version.release=ALPS.W10.24.p0 \
+    ro.mediatek.version.release=ALPS.KK1.MP1.V2.11 \
     ro.mediatek.platform=MT6582 \
     ro.mediatek.chip_ver=S01 \
     ro.mediatek.version.branch=KK1.MP1 \
     ro.mediatek.version.sdk=2 \
     ro.telephony.sim.count=2 \
-    ro.allow.mock.location=1 \
+    ro.allow.mock.location=0 \
     ro.debuggable=1 \
     persist.sys.usb.config=mtp,adb \
     persist.service.adb.enable=1 \
@@ -221,11 +224,11 @@ PRODUCT_NAME := full_mt6582
 PRODUCT_DEVICE := mt6582
 
 # Boot animation
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 480
 
-PRODUCT_AAPT_CONFIG := normal hdpi xhdpi
-PRODUCT_AAPT_PREF_CONFIG := hdpi xhdpi
+PRODUCT_AAPT_CONFIG := normal hdpi
+PRODUCT_AAPT_PREF_CONFIG := hdpi
 
 PRODUCT_PACKAGES += \
     librs_jni \
