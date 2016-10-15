@@ -11,11 +11,24 @@ Storage | 8GB (varies)
 Display | 6.0" 1280 x 720 px (varies)
 Camera  | 8MPx, LED Flash
 
+Cat B15Q MediaTek MT6582 device.
+==============
+
+Basic   | Spec Sheet
+-------:|:-------------------------
+CPU     | 1.3GHz Quad-Core MT6582
+GPU     | Mali-400MP
+Memory  | 1GB RAM
+Shipped Android Version | 4.4.2
+Storage | 4GB (varies)
+Display | 5.0" 800 x 480 px
+Camera  | 5MPx, LED Flash
+
 This branch is for building 6.0.x based ROMs.
 
 * Compilation
 
-        # repo init -u git://github.com/rohantaneja/android.git -b cm-13.0
+        # repo init -u git://github.com/hersche/android.git -b cm-13.0
         
         # repo sync
         
