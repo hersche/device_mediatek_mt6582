@@ -9,6 +9,7 @@ LOCAL_PATH := device/mediatek/mt6582
 LOCAL_STATIC_JAVA_AAR_LIBRARIES += ambientsdk
 
 # Board
+TARGET_DEVICE = sprout
 TARGET_BOARD_PLATFORM := mt6582
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
