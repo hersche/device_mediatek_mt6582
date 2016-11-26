@@ -360,7 +360,7 @@ public class MediaTekRIL extends RIL implements CommandsInterface {
     }
 
     // all that C&P just for responseOperator overriding?
-    @Override
+    // @Override
     protected RILRequest
     processSolicited (Parcel p) {
         int serial, error;
@@ -549,7 +549,7 @@ public class MediaTekRIL extends RIL implements CommandsInterface {
         return rr;
     }
 
-    @Override
+    //@Override
     protected void
     processUnsolicited (Parcel p) {
         Object ret;
@@ -594,7 +594,8 @@ public class MediaTekRIL extends RIL implements CommandsInterface {
                 p.setDataPosition(dataPosition);
 
                 // Forward responses that we are not overriding to the super class
-                super.processUnsolicited(p);
+                //super.processUnsolicited(p);
+                this.processUnsolicited(p);
                 return;
         }
 
@@ -654,7 +655,7 @@ public class MediaTekRIL extends RIL implements CommandsInterface {
             // And rewind again in front
             p.setDataPosition(dataPosition);
 
-            super.processUnsolicited(p);
+            this.processUnsolicited(p);
         }
     }
 	
@@ -860,7 +861,7 @@ public class MediaTekRIL extends RIL implements CommandsInterface {
     }
 
     // Override setupDataCall as the MTK RIL needs 8th param CID (hardwired to 1?)
-    @Override
+    //@Override
     public void
     setupDataCall(String radioTechnology, String profile, String apn,
             String user, String password, String authType, String protocol,

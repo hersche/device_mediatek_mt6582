@@ -1,1 +1,1 @@
-allow adbd auditd_log:dir getattr;
+
